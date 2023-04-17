@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 
+  --primary: #1746A2;
+  --secondary: #5F9DF7;
+  --light-cement: #FFF7E9;
+  --orange: #FF731D;
   --pd: 5px;
   --br: 5px;
   --gap: 5px;
@@ -20,5 +24,15 @@
   justify-content: space-around;
   align-items: center;
   grid-row: 1/2;
-  background-color: aquamarine;
+  background-color: var(--primary);
+  color: var(--light-cement);
+}
+.about{
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange);
+  background-color: var(--secondary);
 }
