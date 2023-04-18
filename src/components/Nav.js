@@ -7,10 +7,12 @@ export const Nav = () => {
         <img src={dark} alt="" />
       </div>
       <div className="navLinks">
-        <h4>About</h4>
-        <h4>Projects</h4>
-        <h4>Skills</h4>
-        <h4>Contact</h4>
+        <ul>
+          <li className="navAbout">About</li>
+          <li className="navProjects">Projects</li>
+          <li className="navSkills">SKills</li>
+          <li className="navContact">Contact</li>
+        </ul>
       </div>
     </div>
   );
