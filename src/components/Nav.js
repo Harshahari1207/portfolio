@@ -1,10 +1,17 @@
+import dark from "../img/moon-icon.svg";
 export const Nav = () => {
+  console.log(dark);
   return (
     <div className="navBar">
-      <h1>About</h1>
-      <h1>Projects</h1>
-      <h1>Skills</h1>
-      <h1>Contact</h1>
+      <div className="darkLogo">
+        <img src={dark} alt="" />
+      </div>
+      <div className="navLinks">
+        <h4>About</h4>
+        <h4>Projects</h4>
+        <h4>Skills</h4>
+        <h4>Contact</h4>
+      </div>
     </div>
   );
 };
