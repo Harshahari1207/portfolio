@@ -9,6 +9,7 @@
   --light-cement: #fff7e9;
   --white: rgb(237, 234, 234);
   --orange: #ff731d;
+  --red: #ff3f1d;
 
   --pd: 5px;
   --br: 5px;
@@ -17,7 +18,7 @@
 
 .App {
   display: grid;
-  grid-template-rows: 0.5fr 3fr 4fr 3fr 1fr;
+  grid-template-rows: 0.5fr 3fr 4fr 2fr 0.25fr;
 }
 /* Nav Bar Styles */
 .navBar {
@@ -65,7 +66,6 @@ a {
   width: 40px;
   height: 40px;
 }
-
 
 /* About Section Styles */
 .about {
@@ -169,7 +169,6 @@ a {
   }
 }
 
-
 /* Project Section styles */
 .projects {
   grid-row: 3/4;
@@ -215,27 +214,31 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   background-color: var(--light-cement);
   padding: calc(var(--pd) * 5);
-  gap: calc(var(--gap)*3);
+  gap: calc(var(--gap) * 3);
   width: 25vw;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: var(--br);
 }
 .cardImg {
   max-width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cardImg img {
-  max-width: 300px;
+  width: 70%;
 }
 .cardContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--gap)*2);
+  gap: calc(var(--gap) * 2);
 }
 .demoDiv {
   display: flex;
@@ -254,10 +257,51 @@ a {
 }
 
 /* Skills Section Styles */
-.skillsDiv{
+.skillsDiv {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   grid-row: 4/5;
+  background-color: var(--light-cement);
+  color: var(--primary);
+  gap: calc(var(--gap)*10);
+}
+.skillsDiv span {
+  color: var(--red);
+}
+.skillsContent {
+  display: grid;
+  grid-template-columns: 10vw 80vw;
+  justify-content: space-between;
+}
+.skillscards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--pd)*5);
+  width: 100px;
+  height: 100px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.skillCard img {
+  width: 50%;
+  height: 50%;
+}
+
+.footer {
+  grid-row: 5/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--light-cement);
 }

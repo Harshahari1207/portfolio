@@ -16,9 +16,9 @@ export const Projects = () => {
     },
     {
       id: uniqid(),
-      name: "Shopping cart ",
+      name: "Tic-Tac-Toe ",
       description:
-        "Shopping made using React JS and has add items, remove items functionality",
+        "Tic-Tac-Toe Game created by using HTML, CSS, Vennila Javascript. It is a Game in which two peoples can Play.",
       img: ticTacToe,
       link: "https://harshahari1207.github.io/shopping-cart/",
     },
