@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.43f0265a.css",
+    "main.js": "/static/js/main.5496e0b8.js",
+    "static/media/library.png": "/static/media/library.3c7fc956cced2a724bcb.png",
+    "static/media/calculator.png": "/static/media/calculator.29282ed7e0d5a09522d7.png",
+    "static/media/tic-tac-toe.png": "/static/media/tic-tac-toe.e5a486443c1c22b030f4.png",
+    "static/media/dog.gif": "/static/media/dog.22b0853569f729a980f4.gif",
+    "static/media/shopping.png": "/static/media/shopping.fef6283cc7b4d385b2c8.png",
+    "static/media/moon-icon.svg": "/static/media/moon-icon.3faf560f51b0b30d37d08bf4da2967a3.svg",
+    "static/media/icons8-github.svg": "/static/media/icons8-github.338d83ea24d46b0f3524f42449486f9b.svg",
+    "index.html": "/index.html",
+    "static/media/icons8-linkedin.svg": "/static/media/icons8-linkedin.014d77f6f1412c4e580441d92268466b.svg",
+    "static/media/icons8-facebook.svg": "/static/media/icons8-facebook.1fc810a8e15c60ec41d7d0586cb4c1d5.svg",
+    "main.43f0265a.css.map": "/static/css/main.43f0265a.css.map",
+    "main.5496e0b8.js.map": "/static/js/main.5496e0b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43f0265a.css",
+    "static/js/main.5496e0b8.js"
+  ]
+}
