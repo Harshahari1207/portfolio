@@ -24,17 +24,17 @@ export const Projects = () => {
     },
     {
       id: uniqid(),
-      name: "Shopping cart ",
+      name: "Calculator ",
       description:
-        "Shopping made using React JS and has add items, remove items functionality",
+        "Calculator Web App is made using HTML, CSS and Vennila Javascript. And it have good User Interface",
       img: calculator,
       link: "https://harshahari1207.github.io/shopping-cart/",
     },
     {
       id: uniqid(),
-      name: "Shopping cart ",
+      name: "Library ",
       description:
-        "Shopping made using React JS and has add items, remove items functionality",
+        "Library created using HTML, CSS and Vennila Javascript. And it has CRUD operations that we can add, edit, read and delete functions.",
       img: library,
       link: "https://harshahari1207.github.io/shopping-cart/",
     },
