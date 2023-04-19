@@ -3,23 +3,26 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+
   --primary: #1746a2;
   --secondary: #5f9df7;
   --light-cement: #fff7e9;
   --white: rgb(237, 234, 234);
   --orange: #ff731d;
+
   --pd: 5px;
   --br: 5px;
   --gap: 5px;
 }
 
-.app {
+.App {
   display: grid;
-  grid-template-rows: 1fr 3fr 4fr 3fr 1fr;
+  grid-template-rows: 0.5fr 3fr 4fr 3fr 1fr;
 }
+/* Nav Bar Styles */
 .navBar {
   width: 100vw;
-  height: 15vh;
+  min-height: 15vh;
   display: flex;
   position: fixed;
   justify-content: space-around;
@@ -27,6 +30,9 @@
   grid-row: 1/2;
   background-color: var(--white);
   color: var(--primary);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .navAbout {
   animation: one 0.7s ease-in 0.4s;
@@ -43,6 +49,9 @@
 .navLinks ul li {
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+}
 .navLinks ul {
   list-style: none;
   display: flex;
@@ -52,14 +61,17 @@
 }
 .darkLogo {
   animation: one-by-one 0.7s ease-in 0.1s;
-  
+
   width: 40px;
   height: 40px;
 }
+
+
+/* About Section Styles */
 .about {
   grid-row: 2/3;
   display: flex;
-  height: 100vh;
+  min-height: 90vh;
   align-items: center;
   justify-content: space-between;
   gap: calc(var(--gap) * 20);
@@ -74,8 +86,6 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--gap);
-  position: relative;
-  left: 0;
 }
 
 .contact img {
@@ -141,6 +151,7 @@
   border-radius: var(--br);
 }
 
+/* Animations */
 @keyframes one-by-one {
   0% {
     transform: translatex(-500px);
@@ -156,4 +167,97 @@
   100% {
     transform: skew(0deg);
   }
+}
+
+
+/* Project Section styles */
+.projects {
+  grid-row: 3/4;
+  background-color: var(--white);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding: calc(var(--pd) * 5);
+}
+.projectsContent {
+  display: grid;
+  grid-template-columns: 10vw 80vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--pd) * 4);
+}
+.sideContact {
+  grid-column: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.allProjects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectsCards {
+  grid-column: 2/3;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--pd);
+  gap: calc(var(--gap) * 15);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-cement);
+  padding: calc(var(--pd) * 5);
+  gap: calc(var(--gap)*3);
+  width: 25vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: var(--br);
+}
+.cardImg {
+  max-width: 20vw;
+}
+.cardImg img {
+  max-width: 300px;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--gap)*2);
+}
+.demoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  background-color: var(--white);
+  padding: var(--pd);
+  border-radius: var(--br);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.demoDiv a {
+  text-decoration-color: var(--white);
+}
+
+/* Skills Section Styles */
+.skillsDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row: 4/5;
+  background-color: var(--light-cement);
 }
