@@ -65,7 +65,7 @@ export const Projects = () => {
               );
             })}
           </div>
-          <a href="https://github.com/Harshahari1207?tab=repositories">
+          <a href="https://harshahari1207.github.io/dashboard/">
             <p>Click here for more Projects</p>
           </a>
         </div>
