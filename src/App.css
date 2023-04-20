@@ -69,6 +69,7 @@ a {
 
 /* About Section Styles */
 .about {
+  position: static;
   grid-row: 2/3;
   display: flex;
   min-height: 90vh;
