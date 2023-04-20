@@ -2,7 +2,7 @@ import { SideContact } from "./SideContact";
 import dog from "../img/dog.gif";
 export const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <SideContact />
       <div className="aboutContent">
         <div className="aboutFirst">

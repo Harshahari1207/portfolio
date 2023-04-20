@@ -1,6 +1,11 @@
+// import { About } from "./About";
+// import { Projects } from "./Projects";
+// import Skills from "./Skills";
+// import Footer from "./Footer";
 import dark from "../img/moon-icon.svg";
+
+
 export const Nav = () => {
-  console.log(dark);
   return (
     <div className="navBar">
       <div className="darkLogo">
@@ -9,13 +14,17 @@ export const Nav = () => {
       <div className="navLinks">
         <ul>
           <li className="navAbout">
-            {" "}
-            <a href="#About">About</a>
+            <a href="#about">About</a>
           </li>
-
-          <li className="navProjects">Projects</li>
-          <li className="navSkills">SKills</li>
-          <li className="navContact">Contact</li>
+          <li className="navProjects">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="navSkills">
+            <a href="#skills">Skills</a>
+          </li>
+          <li className="navContact">
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>

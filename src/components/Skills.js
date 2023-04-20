@@ -62,7 +62,7 @@ const Skills = () => {
     // },
   ];
   return (
-    <div className="skillsDiv">
+    <div id="skills" className="skillsDiv">
       <h1>
         Key Skills <span>&</span> Frames Works
       </h1>
