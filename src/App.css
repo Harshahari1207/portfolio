@@ -156,17 +156,21 @@ a {
 @keyframes one-by-one {
   0% {
     transform: translatex(-500px);
+    opacity: 0;
   }
   100% {
     transform: skew(0deg);
+    opacity: 1;
   }
 }
 @keyframes one {
   0% {
     transform: translatey(-500px);
+    opacity: 0;
   }
   100% {
     transform: skew(0deg);
+    opacity: 1;
   }
 }
 
