@@ -2,25 +2,32 @@
 // import { Projects } from "./Projects";
 // import Skills from "./Skills";
 // import Footer from "./Footer";
-import { useEffect } from "react";
+
+import { useState } from "react";
 import dark from "../img/moon-icon.svg";
+import light from "../img/light.png";
 
 export const Nav = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", handelInfiniteScroll);
-  });
-  const handelInfiniteScroll = async () => {
-    try {
-      console.log("scrollHeight" + document.documentElement.scrollHeight);
-      console.log("innerHeight" + window.innerHeight);
-    } catch (error) {
-      console.log(error);
+  let [darks, setDarkmode] = useState(dark);
+  let [lightmode, setLightmode] = useState(true);
+  const changeLogo = () => {
+    console.log("dark");
+    if (lightmode) {
+      setDarkmode(dark);
+      setLightmode(false);
+      console.log(darks);
+      console.log(lightmode);
+    } else {
+      console.log(darks);
+      console.log(lightmode);
+      setLightmode(true);
+      setDarkmode(light);
     }
   };
   return (
     <div className="navBar">
-      <div className="darkLogo">
-        <img src={dark} alt="" />
+      <div className="darkLogo" onClick={() => changeLogo()}>
+        <img src={darks} alt="" />
       </div>
       <div className="navLinks">
         <ul>

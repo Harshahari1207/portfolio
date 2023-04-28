@@ -63,9 +63,15 @@ a {
 }
 .darkLogo {
   animation: one-by-one 0.7s ease-in 0.1s;
-
-  width: 40px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+.darkLogo img{
+  width: 50%;
+  height: 50%;
 }
 
 /* About Section Styles */
