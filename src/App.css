@@ -4,10 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 
-  --primary: #1746a2;
-  --secondary: #5f9df7;
-  --light-cement: #fff7e9;
-  --white: rgb(237, 234, 234);
+
   --orange: #ff731d;
   --red: #ff3f1d;
 
@@ -16,9 +13,21 @@
   --gap: 5px;
 }
 
+.darkmode{
+  --primary: rgb(223, 223, 126);
+  --light-cement: rgb(74, 60, 60);
+  --white: rgb(22, 22, 22);
+}
+.lightmode{
+  --primary: #1746a2;
+  --secondary: #5f9df7;
+  --light-cement: #fff7e9;
+  --white: rgb(237, 234, 234);
+}
 .App {
   display: grid;
   grid-template-rows: 0.5fr 3fr 4fr 2fr 0.25fr;
+
 }
 /* Nav Bar Styles */
 .navBar {
@@ -53,6 +62,7 @@
 }
 a {
   text-decoration: none;
+  color: var(--primary);
 }
 .navLinks ul {
   list-style: none;
@@ -66,12 +76,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-cement);
+
+}
+.darkLogo:hover{
+  cursor: pointer;
 }
 .darkLogo img{
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
 }
 
 /* About Section Styles */
@@ -318,4 +334,5 @@ a {
   align-items: center;
   justify-content: center;
   background-color: var(--light-cement);
+  color: var(--primary);
 }

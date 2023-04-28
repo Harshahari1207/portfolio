@@ -4,17 +4,21 @@
 // import Footer from "./Footer";
 
 import { useState } from "react";
-import dark from "../img/moon-icon.svg";
+import dark from "../img/dark.png";
 import light from "../img/light.png";
 
 export const Nav = () => {
   let [darks, setDarkmode] = useState(dark);
   let [lightmode, setLightmode] = useState(true);
+  const body = document.querySelector(".body");
   const changeLogo = () => {
     console.log("dark");
     if (lightmode) {
       setDarkmode(dark);
       setLightmode(false);
+      body.classList.remove("darkmode");
+      body.classList.add("lightmode");
+      
       console.log(darks);
       console.log(lightmode);
     } else {
@@ -22,6 +26,9 @@ export const Nav = () => {
       console.log(lightmode);
       setLightmode(true);
       setDarkmode(light);
+      body.classList.add("darkmode");
+      body.classList.remove("lightmode");
+      
     }
   };
   return (
