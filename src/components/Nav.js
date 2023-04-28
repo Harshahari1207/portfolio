@@ -14,10 +14,10 @@ export const Nav = () => {
   const changeLogo = () => {
     console.log("dark");
     if (lightmode) {
-      setDarkmode(dark);
+      setDarkmode(light);
       setLightmode(false);
-      body.classList.remove("darkmode");
-      body.classList.add("lightmode");
+      body.classList.add("darkmode");
+      body.classList.remove("lightmode");
       
       console.log(darks);
       console.log(lightmode);
@@ -25,9 +25,9 @@ export const Nav = () => {
       console.log(darks);
       console.log(lightmode);
       setLightmode(true);
-      setDarkmode(light);
-      body.classList.add("darkmode");
-      body.classList.remove("lightmode");
+      setDarkmode(dark);
+      body.classList.remove("darkmode");
+      body.classList.add("lightmode");
       
     }
   };
