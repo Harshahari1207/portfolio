@@ -23,7 +23,18 @@ export const Contact = () => {
             <a href="tel:+918247349639">8247349639</a>
           </div>
         </div>
-        <form></form>
+        <form>
+          <div className="inputDiv">
+            <input className="inputName" type="text" placeholder="Your Name" name="username" />
+          </div>
+          <div className="inputDiv">
+            <input className="inputMail" type="email" placeholder="Your Mail" name="mail" />
+          </div>
+          <div className="inputTextDiv">
+            <textarea className="inputMessage" type="text" placeholder="Message" name="username" cols={5} rows={7} />
+          </div>
+          <button>Send Message</button>
+        </form>
       </div>
     </div>
   );

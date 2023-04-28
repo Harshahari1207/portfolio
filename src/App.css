@@ -23,7 +23,7 @@
   --light-cement: #fff7e9;
   --white: rgb(237, 234, 234);
 }
-body{
+body {
   background-color: var(--white);
 }
 .App {
@@ -335,7 +335,7 @@ a {
   height: 50%;
 }
 /* Contact */
-.mainContact{
+.mainContact {
   grid-row: 5/6;
   min-height: 100vh;
   grid-template-columns: 10vw 80vw;
@@ -343,29 +343,29 @@ a {
   align-items: center;
   justify-content: center;
 }
-.mainContactForm{
+.mainContactForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: calc(var(--gap) * 3);
   grid-column: 2/3;
   width: 70vw;
-  height: 60vh;
+  min-height: 70vh;
   border-radius: var(--br);
   background-color: var(--light-cement);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.contactDetails{
+.contactDetails {
   width: 98%;
   padding: var(--pd);
   display: flex;
-align-items: center;
-justify-content: space-evenly;
-
+  align-items: center;
+  justify-content: space-evenly;
 }
-.mail{
+.mail {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,17 +374,16 @@ justify-content: space-evenly;
   background-color: var(--white);
   border-radius: var(--br);
 }
-.phone{
+.phone {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--pd);
   background-color: var(--white);
   width: 30%;
-  border-radius: calc(var(--br)*2);
+  border-radius: calc(var(--br) * 2);
 }
-.contactDetailsImg{
-  
+.contactDetailsImg {
   width: 80px;
   height: 80px;
   display: flex;
@@ -392,12 +391,43 @@ justify-content: space-evenly;
   justify-content: center;
   border-radius: 50%;
 }
-.contactDetailsImg img{
+.contactDetailsImg img {
   width: 40px;
   height: 40px;
 }
-.contactDetailsImg a{
+.contactDetailsImg a {
   text-decoration: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) * 3);
+  align-items: center;
+  width: 100%;
+}
+
+.inputDiv,
+.inputTextDiv {
+  width: 90%;
+  background-color: var(--white);
+  padding: var(--pd);
+}
+.inputName,
+.inputMail,
+.inputMessage {
+  background-color: var(--white);
+  padding: var(--pd);
+  width: 100%;
+  border: var(--white);
+  color: var(--primary);
+}
+form button {
+  padding: calc(var(--pd)*3);
+  border: 0;
+  border-radius: var(--br);
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--primary);
 }
 /* Footer */
 .footer {
@@ -407,4 +437,5 @@ justify-content: space-evenly;
   justify-content: center;
   background-color: var(--light-cement);
   color: var(--primary);
+  
 }
