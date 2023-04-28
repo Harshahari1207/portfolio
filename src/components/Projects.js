@@ -4,6 +4,11 @@ import library from "../img/library.png";
 import ticTacToe from "../img/tic-tac-toe.png";
 import calculator from "../img/calculator.png";
 import uniqid from "uniqid";
+import React from "react";
+import "react-reveal/globals";
+
+import Fade from "react-reveal/Fade";
+
 export const Projects = () => {
   const cards = [
     {
@@ -48,22 +53,30 @@ export const Projects = () => {
         </div>
         <div className="allProjects">
           <div className="projectsCards">
-            {cards.map((card) => {
-              return (
-                <div key={card.id} className="card">
-                  <div className="cardImg">
-                    <img src={card.img} alt="" />
-                  </div>
-                  <div className="cardContent">
-                    <h2>{card.name} </h2>
-                    <p>{card.description}</p>
-                    <div className="demoDiv">
-                      <a href={card.link}>Live Demo</a>
+            
+              <Fade
+                bottom
+                duration={1500}
+                onReveal={() => console.log("Element revealed!")}
+              >
+                {cards.map((card) => {
+                  return (
+                    <div key={card.id} className="card">
+                      <div className="cardImg">
+                        <img src={card.img} alt="" />
+                      </div>
+                      <div className="cardContent">
+                        <h2>{card.name} </h2>
+                        <p>{card.description}</p>
+                        <div className="demoDiv">
+                          <a href={card.link}>Live Demo</a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
+                  );
+                })}
+              </Fade>
+            
           </div>
           <a href="https://harshahari1207.github.io/dashboard/">
             <p>Click here for more Projects</p>

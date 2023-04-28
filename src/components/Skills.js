@@ -1,5 +1,7 @@
 import { SideContact } from "./SideContact";
 import uniqid from "uniqid";
+import React from "react";
+import Fade from "react-reveal/Fade";
 const Skills = () => {
   const skillCards = [
     {
@@ -68,7 +70,8 @@ const Skills = () => {
       </h1>
       <div className="skillsContent">
         <SideContact />
-        <div className="skillscards">
+        <div className="skillscards reveal">
+          <Fade bottom duration={1500}>
           {skillCards.map((card) => {
             return (
               <div key={card.id} className="skillCard">
@@ -77,6 +80,7 @@ const Skills = () => {
               </div>
             );
           })}
+          </Fade>
         </div>
       </div>
     </div>

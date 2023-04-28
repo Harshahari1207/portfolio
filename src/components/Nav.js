@@ -2,10 +2,21 @@
 // import { Projects } from "./Projects";
 // import Skills from "./Skills";
 // import Footer from "./Footer";
+import { useEffect } from "react";
 import dark from "../img/moon-icon.svg";
 
-
 export const Nav = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", handelInfiniteScroll);
+  });
+  const handelInfiniteScroll = async () => {
+    try {
+      console.log("scrollHeight" + document.documentElement.scrollHeight);
+      console.log("innerHeight" + window.innerHeight);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="navBar">
       <div className="darkLogo">
