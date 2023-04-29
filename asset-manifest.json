@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.91653340.css",
-    "main.js": "/portfolio/static/js/main.e5db2ffe.js",
+    "main.css": "/portfolio/static/css/main.8b2c35e5.css",
+    "main.js": "/portfolio/static/js/main.89af1ff9.js",
     "static/media/library.png": "/portfolio/static/media/library.3c7fc956cced2a724bcb.png",
     "static/media/calculator.png": "/portfolio/static/media/calculator.29282ed7e0d5a09522d7.png",
     "static/media/tic-tac-toe.png": "/portfolio/static/media/tic-tac-toe.e5a486443c1c22b030f4.png",
     "static/media/dog.gif": "/portfolio/static/media/dog.22b0853569f729a980f4.gif",
     "static/media/shopping.png": "/portfolio/static/media/shopping.fef6283cc7b4d385b2c8.png",
     "static/media/Mail.png": "/portfolio/static/media/Mail.226deac687416c031e47.png",
+    "static/media/three-line-menu-icon.png": "/portfolio/static/media/three-line-menu-icon.9a5e878fff97606ebe95.png",
     "static/media/phone.png": "/portfolio/static/media/phone.0eae189bc9039b36559b.png",
     "static/media/icons8-github.svg": "/portfolio/static/media/icons8-github.338d83ea24d46b0f3524f42449486f9b.svg",
     "index.html": "/portfolio/index.html",
     "static/media/icons8-linkedin.svg": "/portfolio/static/media/icons8-linkedin.014d77f6f1412c4e580441d92268466b.svg",
     "static/media/icons8-facebook.svg": "/portfolio/static/media/icons8-facebook.1fc810a8e15c60ec41d7d0586cb4c1d5.svg",
-    "main.91653340.css.map": "/portfolio/static/css/main.91653340.css.map",
-    "main.e5db2ffe.js.map": "/portfolio/static/js/main.e5db2ffe.js.map"
+    "main.8b2c35e5.css.map": "/portfolio/static/css/main.8b2c35e5.css.map",
+    "main.89af1ff9.js.map": "/portfolio/static/js/main.89af1ff9.js.map"
   },
   "entrypoints": [
-    "static/css/main.91653340.css",
-    "static/js/main.e5db2ffe.js"
+    "static/css/main.8b2c35e5.css",
+    "static/js/main.89af1ff9.js"
   ]
 }
