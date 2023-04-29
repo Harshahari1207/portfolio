@@ -2,6 +2,7 @@ import { SideContact } from "./SideContact";
 import dog from "../img/dog.gif";
 export const About = () => {
   return (
+    
     <div id="about" className="about">
       <SideContact />
       <div className="aboutContent">

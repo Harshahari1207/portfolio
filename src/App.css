@@ -28,7 +28,7 @@ body {
 }
 .App {
   display: grid;
-  grid-template-rows: 0.5fr 3fr 4fr 3fr 3fr 0.25fr;
+  grid-template-rows: 0.5fr 3fr auto 3fr 3fr 0.25fr;
 }
 /* Nav Bar Styles */
 .navBar {
@@ -40,6 +40,7 @@ body {
   justify-content: space-around;
   align-items: center;
   grid-row: 1/2;
+
   background-color: var(--white);
   color: var(--primary);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -95,11 +96,38 @@ a {
   width: 70%;
   height: 70%;
 }
+.afterNavLinks {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-cement);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.afterNavLinks img {
+  width: 50%;
+  height: 50%;
+}
+.openNavLinks {
+  display: flex;
+}
+.leftNavLinks {
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  grid-row: 2/6;
+  
+  width: 40vw;
+  background-color: #ff3f1d;
 
+}
 /* About Section Styles */
 .about {
   position: static;
   grid-row: 2/3;
+  
   display: flex;
   min-height: 90vh;
   align-items: center;
@@ -108,6 +136,10 @@ a {
   color: var(--primary);
   background-color: var(--light-cement);
   padding: calc(var(--pd) * 5);
+}
+.aboutEmpty{
+  display: flex;
+  flex-direction: column;
 }
 .contact {
   display: flex;
@@ -206,6 +238,7 @@ a {
 /* Project Section styles */
 .projects {
   grid-row: 3/4;
+
   margin-top: 50px;
   min-height: 100vh;
   background-color: var(--white);
@@ -300,6 +333,7 @@ a {
   align-items: center;
   justify-content: center;
   grid-row: 4/5;
+
   background-color: var(--light-cement);
   color: var(--primary);
   gap: calc(var(--gap) * 10);
@@ -310,13 +344,15 @@ a {
 .skillsContent {
   display: grid;
   grid-template-columns: 10vw 80vw;
+  align-items: center;
   justify-content: space-between;
 }
 .skillscards {
   display: flex;
-  flex-wrap: wrap;
+  flex: 1 1;
   align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) * 5);
 }
 .skillCard {
   display: flex;
@@ -336,6 +372,7 @@ a {
 }
 /* Contact */
 .mainContact {
+
   grid-row: 5/6;
   min-height: 100vh;
   grid-template-columns: 10vw 80vw;
@@ -411,10 +448,12 @@ form {
   width: 90%;
   background-color: var(--white);
   padding: var(--pd);
+  border-radius: var(--br);
 }
 .inputName,
 .inputMail,
 .inputMessage {
+  border-radius: var(--br);
   background-color: var(--white);
   padding: var(--pd);
   width: 100%;
@@ -422,7 +461,7 @@ form {
   color: var(--primary);
 }
 form button {
-  padding: calc(var(--pd)*3);
+  padding: calc(var(--pd) * 3);
   border: 0;
   border-radius: var(--br);
   cursor: pointer;
@@ -432,10 +471,52 @@ form button {
 /* Footer */
 .footer {
   grid-row: 6/7;
+
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--light-cement);
   color: var(--primary);
-  
+}
+
+@media only screen and (max-width: 900px) {
+  .mainNavLinks {
+    display: none;
+  }
+  .navLinks ul {
+    flex-direction: column;
+  }
+  .contact {
+    display: none;
+  }
+  .about {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .allProjects {
+    gap: calc(var(--gap) * 8);
+  }
+  .projectsCards {
+    flex-direction: column;
+  }
+  .card {
+    width: 30vw;
+  }
+  .skillsContent {
+    display: flex;
+  }
+  .skillscards {
+    flex-wrap: wrap;
+    width: 80vw;
+  }
+  .contactDetails {
+    flex-direction: column;
+    gap: var(--gap);
+  }
+  .contactDetails .mail .phone {
+    width: 250px;
+  }
+  .mainContactForm {
+    min-height: 75vh;
+  }
 }
