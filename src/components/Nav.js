@@ -8,11 +8,12 @@ import dark from "../img/dark.png";
 import light from "../img/light.png";
 import { NavLinks } from "./NavLinks";
 
-import three from "../img/three-line-menu-icon.png";
+import logo from "../img/three-line-menu-icon.png";
 
 export const Nav = () => {
   let [darks, setDarkmode] = useState(dark);
   let [lightmode, setLightmode] = useState(true);
+  let [click, setClick] = useState(true);
   const body = document.querySelector(".body");
   const changeLogo = () => {
     console.log("dark");
@@ -33,14 +34,19 @@ export const Nav = () => {
       body.classList.add("lightmode");
     }
   };
-  const openNavLinks = () => {
-    console.log("open nva links")
-    return(
-      <div className="openNavLinks">
-        <h1>Open</h1>
-      </div>
-    )
+  const changeNav = () => {
+    const navAfter = document.querySelector(".navAfter");
+    if(click){
+      console.log("clicked");
+      setClick(false);
+      navAfter.style.display = "flex";
+    }else{
+      setClick(true);
+      navAfter.style.display = "none";
+      console.log("clicked in else");
+    }
   };
+
   return (
     <div className="navBar">
       <div className="darkLogo" onClick={() => changeLogo()}>
@@ -48,6 +54,11 @@ export const Nav = () => {
       </div>
       <div className="mainNavLinks">
         <NavLinks />
+      </div>
+      <div className="navLinksAfter">
+        <div className="afterLogo" onClick={() => changeNav()}>
+          <img src={logo} alt="" />
+        </div>
       </div>
     </div>
   );

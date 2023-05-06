@@ -11,17 +11,25 @@
   --br: 5px;
   --gap: 5px;
 }
+body{
+  position: relative;
+  display: block;
+}
 
 .darkmode {
   --primary: rgb(223, 223, 126);
   --light-cement: rgb(74, 60, 60);
   --white: rgb(22, 22, 22);
+  --nav-after-back: #0A2647;
+  --nav-after: #495579;
 }
 .lightmode {
   --primary: #1746a2;
   --secondary: #5f9df7;
   --light-cement: #fff7e9;
   --white: rgb(237, 234, 234);
+  --nav-after-back: #9BA4B5;
+  --nav-after: #D5B4B4;
 }
 body {
   background-color: var(--white);
@@ -34,7 +42,7 @@ body {
 .navBar {
   z-index: 3;
   width: 100vw;
-  min-height: 20vh;
+  height: 20vh;
   display: flex;
   position: fixed;
   justify-content: space-around;
@@ -96,32 +104,55 @@ a {
   width: 70%;
   height: 70%;
 }
-.afterNavLinks {
+.afterLogo {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: var(--light-cement);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-.afterNavLinks img {
+.afterLogo img {
   width: 50%;
   height: 50%;
 }
 .openNavLinks {
   display: flex;
 }
-.leftNavLinks {
-  z-index: 4;
+.navAfter{
+  grid-row: 2/3;
+  position: fixed;
+  display: none;
+  background-color: var(--nav-after-back);
+  opacity: .9;
+  width: 30%;
+  z-index: 3;
+  float: right;
+  right: 0;
+  top: 20vh;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+.navAfterChild{
+  width: 60%;
+  height: 60%;
+  background-color: var(--nav-after);
+  color: var(--primary);
+  border-radius: calc(var(--br)*3);
+  opacity: 1;
   display: flex;
-  justify-content: flex-end;
-  grid-row: 2/6;
-  
-  width: 40vw;
-  background-color: #ff3f1d;
-
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.navAfter .navLinks ul{
+  display: flex;
+  flex-direction: column;
 }
 /* About Section Styles */
 .about {
@@ -486,6 +517,12 @@ form button {
   .navLinks ul {
     flex-direction: column;
   }
+  .afterLogo{
+    display: flex;
+  }
+  /* .navAfter{
+    display: flex;
+  } */
   .contact {
     display: none;
   }
