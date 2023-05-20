@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "submissions": {
+      ".write": true
+    }
+  }
+}

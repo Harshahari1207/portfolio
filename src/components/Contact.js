@@ -1,7 +1,36 @@
 import { SideContact } from "./SideContact";
 import mail from "../img/Mail.png";
 import phn from "../img/phone.png";
+import { useState } from "react";
+import firebase from "./firebase";
+import "firebase/database";
 export const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Save form data in Firebase Realtime Database
+      await firebase.database().ref("submissions").push({
+        name,
+        email,
+        message,
+      });
+      console.log("Submission complete");
+
+      // Email sending code goes here (if needed)
+
+      // Reset the form
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="mainContact" id="contact">
       <div className="sideContact">
@@ -23,17 +52,40 @@ export const Contact = () => {
             <a href="tel:+918247349639">8247349639</a>
           </div>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="inputDiv">
-            <input className="inputName" type="text" placeholder="Your Name" name="username" />
+            <input
+              className="inputName"
+              type="text"
+              placeholder="Your Name"
+              name="username"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </div>
           <div className="inputDiv">
-            <input className="inputMail" type="email" placeholder="Your Mail" name="mail" />
+            <input
+              className="inputMail"
+              type="email"
+              placeholder="Your Mail"
+              name="mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="inputTextDiv">
-            <textarea className="inputMessage" type="text" placeholder="Message" name="username" cols={5} rows={7} />
+            <textarea
+              className="inputMessage"
+              type="text"
+              placeholder="Message"
+              name="username"
+              cols={5}
+              rows={7}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
           </div>
-          <button>Send Message</button>
+          <button type="submit">Send Message</button>
         </form>
       </div>
     </div>
