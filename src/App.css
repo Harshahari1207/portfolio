@@ -12,7 +12,6 @@
   --gap: 5px;
 }
 
-
 .darkmode {
   --primary: rgb(223, 223, 126);
   --light-cement: rgb(74, 60, 60);
@@ -234,8 +233,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 450px;
-  max-height: 250px;
+  width: 450px;
+  height: 250px;
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -243,8 +242,8 @@ a {
   border-radius: var(--br);
 }
 .resumeGif img {
-  max-width: 400px;
-  max-height: 400px;
+  width: 400px;
+  height: 200px;
   border-radius: var(--br);
 }
 /* #resume-gif{
@@ -442,11 +441,14 @@ a {
   align-items: center;
   justify-content: space-evenly;
 }
+.formSubmissionDisplay {
+  color: var(--red);
+}
 .mail {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--pd)*2);
+  padding: calc(var(--pd) * 2);
   max-width: 80%;
   background-color: var(--white);
   border-radius: var(--br);
@@ -455,7 +457,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: calc(var(--pd)*2);
+  padding: calc(var(--pd) * 2);
   background-color: var(--white);
   max-width: 50%;
   border-radius: calc(var(--br) * 2);
@@ -511,7 +513,7 @@ form button {
 /* Footer */
 .footer {
   grid-row: 6/7;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;

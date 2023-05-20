@@ -8,10 +8,13 @@ export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submissionDisplay, setSubmissionDisplay] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setSubmissionDisplay(
+      "Message sent successfully. Send another message if needed."
+    );
     try {
       // Save form data in Firebase Realtime Database
       await firebase.database().ref("submissions").push({
@@ -37,6 +40,7 @@ export const Contact = () => {
         <SideContact />
       </div>
       <div className="mainContactForm">
+        <p className="formSubmissionDisplay">{submissionDisplay}</p>
         <h2>Contact Me</h2>
         <div className="contactDetails">
           <div className="mail">
@@ -59,6 +63,7 @@ export const Contact = () => {
               type="text"
               placeholder="Your Name"
               name="username"
+              required
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -67,8 +72,9 @@ export const Contact = () => {
             <input
               className="inputMail"
               type="email"
-              placeholder="Your Mail"
+              placeholder="abc@gmail.com"
               name="mail"
+              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -79,6 +85,7 @@ export const Contact = () => {
               type="text"
               placeholder="Message"
               name="username"
+              required
               cols={5}
               rows={7}
               value={message}
