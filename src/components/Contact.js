@@ -84,7 +84,7 @@ export const Contact = () => {
               className="inputMessage"
               type="text"
               placeholder="Message"
-              name="username"
+              name="message"
               required
               cols={5}
               rows={7}
