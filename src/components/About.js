@@ -19,7 +19,7 @@ export const About = () => {
         </div>
       </div>
       <div className="resumeGif">
-        <a href="https://drive.google.com/file/d/1F0JeTz74O9_YXJGcWy9E5sgTQkf4604S/view?usp=sharing">
+        <a href="https://drive.google.com/file/d/1Y1JJb4omaZty2w_iWBXnF1QHz0yiIuug/view?usp=sharing">
           <img id="resume-gif" src={dog} alt="" />
         </a>
       </div>
