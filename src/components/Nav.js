@@ -13,7 +13,7 @@ import logo from "../img/three-line-menu-icon.png";
 export const Nav = () => {
   let [darks, setDarkmode] = useState(dark);
   let [lightmode, setLightmode] = useState(true);
-  let [click, setClick] = useState(true);
+
   const body = document.querySelector(".body");
   const changeLogo = () => {
     console.log("dark");
@@ -36,15 +36,10 @@ export const Nav = () => {
   };
   const changeNav = () => {
     const navAfter = document.querySelector(".navAfter");
-    if(click){
-      console.log("clicked");
-      setClick(false);
-      navAfter.style.display = "flex";
-    }else{
-      setClick(true);
-      navAfter.style.display = "none";
-      console.log("clicked in else");
-    }
+    const navLinksAfter = document.querySelector(".navLinksAfter");
+    console.log("clicked");
+    navLinksAfter.style.display = "none";
+    navAfter.style.display = "flex";
   };
 
   return (

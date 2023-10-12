@@ -50,6 +50,16 @@ const Skills = () => {
       name: "Webpack",
       img: "https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg",
     },
+    {
+      id: uniqid(),
+      name: "Express.JS",
+      img: "https://initialcommit.com/img/initialcommit/beginners-guide-to-using-express-js-and-node-js-framework.png",
+    },
+    {
+      id: uniqid(),
+      name: "Next.JS",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1920px-Nextjs-logo.svg.png",
+    },
     // {
     //   name: "REACTJS",
     //   img: "",
@@ -65,21 +75,23 @@ const Skills = () => {
   ];
   return (
     <div id="skills" className="skillsDiv">
-      <h1>
-        Key Skills <span>&</span> Frames Works
-      </h1>
+      <div className="skillsHeading">
+        <h1>
+          Key Skills <span>&</span> Frames Works
+        </h1>
+      </div>
       <div className="skillsContent">
         <SideContact />
         <div className="skillscards reveal">
           <Fade bottom duration={1500}>
-          {skillCards.map((card) => {
-            return (
-              <div key={card.id} className="skillCard">
-                <img src={card.img} alt={card.name} />
-                <p>{card.name}</p>
-              </div>
-            );
-          })}
+            {skillCards.map((card) => {
+              return (
+                <div key={card.id} className="skillCard">
+                  <img src={card.img} alt={card.name} />
+                  <p>{card.name}</p>
+                </div>
+              );
+            })}
           </Fade>
         </div>
       </div>
